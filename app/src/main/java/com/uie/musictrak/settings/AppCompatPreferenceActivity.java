@@ -1,4 +1,4 @@
-package com.uie.musictrak;
+package com.uie.musictrak.settings;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
