@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="songListBGColor">#fe85c4d1</color>
+    <color name="PrimaryLight">#7b9dd7</color>
 </resources>

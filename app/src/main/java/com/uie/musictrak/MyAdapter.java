@@ -49,7 +49,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // - replace the contents of the view with that element
         TextView infoText = holder.mLinearLayout.findViewById(R.id.info_text);
         infoText.setText(mDataset[position]);
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)
