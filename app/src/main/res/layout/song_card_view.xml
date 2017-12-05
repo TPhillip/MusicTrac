@@ -44,7 +44,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/shareGlyph"
                 android:layout_width="0dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
@@ -52,7 +52,7 @@
                 card_view:srcCompat="@drawable/ic_menu_share" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/wrenchGlyph"
                 android:layout_width="0dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
