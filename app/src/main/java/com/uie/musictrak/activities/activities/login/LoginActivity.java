@@ -1,4 +1,4 @@
-package com.uie.musictrak;
+package com.uie.musictrak.activities.activities.login;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -29,6 +29,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.uie.musictrak.R;
+import com.uie.musictrak.activities.activities.songview.YourSongs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -334,7 +337,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                Intent goMain = new Intent(LoginActivity.this, MainActivity.class);
+                Intent goMain = new Intent(LoginActivity.this, YourSongs.class);
                 Bundle userData = new Bundle();
                 userData.putString("email", mEmail);
                 goMain.putExtras(userData);

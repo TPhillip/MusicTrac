@@ -1,4 +1,4 @@
-package com.uie.musictrak;
+package com.uie.musictrak.activities.activities.songview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,11 +6,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.uie.musictrak.R;
+
 /**
  * Created by alias on 12/4/2017.
  */
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class SongRVAdapter extends RecyclerView.Adapter<SongRVAdapter.ViewHolder> {
     private String[] mDataset;
 
     // Provide a reference to the views for each data item
@@ -26,14 +28,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
+    public SongRVAdapter(String[] myDataset) {
         mDataset = myDataset;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+    public SongRVAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                       int viewType) {
         // create a new view
         LinearLayout l = (LinearLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.song_card_view, parent, false);

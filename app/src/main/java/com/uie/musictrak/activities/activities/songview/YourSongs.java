@@ -1,4 +1,4 @@
-package com.uie.musictrak;
+package com.uie.musictrak.activities.activities.songview;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,13 +15,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.uie.musictrak.settings.SettingsActivity;
+import com.uie.musictrak.R;
+import com.uie.musictrak.activities.activities.trackedit.TrackEditor;
+import com.uie.musictrak.activities.activities.settings.SettingsActivity;
 
-public class MainActivity extends AppCompatActivity
+public class YourSongs extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private static String userEmail;
 
 
     @Override
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent edtitSong = new Intent(MainActivity.this, TrackEditor.class);
+                Intent edtitSong = new Intent(YourSongs.this, TrackEditor.class);
                 startActivity(edtitSong);
             }
         });
@@ -50,17 +53,23 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         String[] mDataSet = new String[]{
-                "Test Song 1",
-                "Test Song 2",
-                "Test Song 3",
-                "Test Song 4",
-                "Test Song 4"};
+                "Song Placeholder 1",
+                "Song Placeholder 2",
+                "Song Placeholder 3",
+                "Song Placeholder 4",
+                "Song Placeholder 4",
+                "Song Placeholder 5",
+                "Song Placeholder 6",
+                "Song Placeholder 7",
+                "Song Placeholder 8",
+                "Song Placeholder 9",
+                "Song Placeholder 10"};
 
         mRecyclerView = (RecyclerView) findViewById(R.id.songs_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new MyAdapter(mDataSet);
+        mAdapter = new SongRVAdapter(mDataSet);
         mRecyclerView.setAdapter(mAdapter);
     }
 
@@ -86,7 +95,7 @@ public class MainActivity extends AppCompatActivity
             Snackbar.make(this.getCurrentFocus(), "Not implemented in this prototype", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         }else if (id == R.id.nav_manage) {
-            Intent goSettings = new Intent(MainActivity.this, SettingsActivity.class);
+            Intent goSettings = new Intent(YourSongs.this, SettingsActivity.class);
             startActivity(goSettings);
         }
 

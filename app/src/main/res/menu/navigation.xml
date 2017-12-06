@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/save_song"
         android:icon="@android:drawable/ic_menu_save"
         android:title="@string/navigation_save" />
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/trash_song"
         android:icon="@android:drawable/ic_menu_delete"
         android:title="@string/navigation_trash" />
 

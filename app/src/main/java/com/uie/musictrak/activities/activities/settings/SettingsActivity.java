@@ -1,4 +1,4 @@
-package com.uie.musictrak.settings;
+package com.uie.musictrak.activities.activities.settings;
 
 import android.annotation.TargetApi;
 import android.content.Context;

@@ -5,8 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_start_color"
-    tools:context="com.uie.musictrak.TrackEditor">
+    android:background="@drawable/editor_bg"
+    tools:context=".activities.activities.trackedit.TrackEditor">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -19,9 +19,10 @@
         app:menu="@menu/navigation" />
 
     <LinearLayout
+        android:id="@+id/song_control_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/cardview_light_background"
+        android:background="@color/cardview_shadow_start_color"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +65,7 @@
                     android:paddingLeft="5dp"
                     android:text="Song Name"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/cardview_light_background"
                     android:textSize="24sp" />
 
                 <ImageView
@@ -76,5 +78,29 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/colorActivatedHighlight"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Add Track"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

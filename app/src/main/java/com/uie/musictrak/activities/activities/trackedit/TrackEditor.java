@@ -1,11 +1,14 @@
-package com.uie.musictrak;
+package com.uie.musictrak.activities.activities.trackedit;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.uie.musictrak.R;
 
 public class TrackEditor extends AppCompatActivity {
 
@@ -17,11 +20,13 @@ public class TrackEditor extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                case R.id.save_song:
+                    Snackbar.make(findViewById(R.id.song_control_bar) , "Would save the newly-created song bach to user's song list", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.trash_song:
+                    Snackbar.make(findViewById(R.id.song_control_bar) , "Disgards the current song project", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                     return true;
             }
             return false;

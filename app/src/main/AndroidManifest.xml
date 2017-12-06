@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.activities.login.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,29 +24,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.activities.songview.YourSongs"
             android:label="@string/title_activity_main"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".activities.activities.login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.uie.musictrak.LoginActivity" />
+                android:value=".activities.activities.login.LoginActivity" />
         </activity>
         <activity
-            android:name=".settings.SettingsActivity"
+            android:name=".activities.activities.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.activities.songview.YourSongs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.uie.musictrak.MainActivity" />
+                android:value=".activities.activities.songview.YourSongs" />
         </activity>
         <activity
-            android:name=".TrackEditor"
+            android:name=".activities.activities.trackedit.TrackEditor"
             android:label="@string/title_activity_track_editor"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.activities.songview.YourSongs">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.uie.musictrak.MainActivity" />
+                android:value=".activities.activities.songview.YourSongs" />
         </activity>
     </application>
 
