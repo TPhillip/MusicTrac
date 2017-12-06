@@ -92,7 +92,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/add_track_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -101,6 +101,15 @@
             android:textColor="@color/cardview_light_background"
             android:textSize="18sp"
             android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/track_edit_body"
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        app:layout_constraintBottom_toTopOf="@+id/song_control_bar"
+        tools:layout_editor_absoluteX="8dp">
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
